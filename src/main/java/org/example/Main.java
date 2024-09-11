@@ -1,5 +1,7 @@
 package org.example;
 
+import static java.lang.Math.round;
+
 public class Main {
 
     /** Method 1
@@ -9,7 +11,10 @@ public class Main {
      * Method signature: circleArea(int)
      * Returns the area of a circle. */
     public static double circleArea(int radius) {
-        return 0;
+
+        return ((Math.round(Math.PI * radius * radius * 100.0)) / 100.0);
+
+
     }
 
     /** Method 2
@@ -19,7 +24,8 @@ public class Main {
      * Method signature: circleCircum(int)
      * Returns the circumference of a circle. */
     public static double circleCircum(int radius) {
-        return 0;
+
+        return ((Math.round (2* Math.PI * radius * 100.0))/100.0);
     }
 
     /** Method 3
@@ -33,7 +39,7 @@ public class Main {
      * Circumference: 18.85
      * Area: 28.27 */
     public static String circleInfo(int radius) {
-        return null;
+        return ("Radius: "+ radius + "\nCircumference: " + circleCircum(radius) + "\nArea: " + circleArea(radius)  );
     }
 
     /** Method 4
@@ -45,7 +51,7 @@ public class Main {
      * Format of returned String: e.g. 3 hours and 46 minutes */
     public static String minutesToHoursMinutes(int minutes) {
 
-        return null;
+        return new String(minutes/60 + " hours and " + minutes%60 + " minutes");
     }
 
     /** Method 5
@@ -58,7 +64,7 @@ public class Main {
      * */
     public static String twentyFourToTwelve(String time) {
 
-        return null;
+        return new String(time.substring(1,3) - 12);
 
     }
 
